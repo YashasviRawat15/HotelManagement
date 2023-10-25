@@ -3,6 +3,7 @@ def hotel():
     conn=mysql.connector.connect(host='localhost', user='root',passwd='')
     cursor=conn.cursor()
     cursor.execute('create database hotel')
+    
 def createtables():
     conn=mysql.connector.connect(host='localhost', user='root',passwd="",database="hotel")
     cursor=conn.cursor()

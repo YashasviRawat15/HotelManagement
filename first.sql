@@ -2,6 +2,8 @@ create database hotel;
 use hotel;
 create table empl (empid varchar(5) primary key, name varchar(30),
 salary int, jobtype varchar(20));
+
+
 insert into empl values (‘E0001’, ‘Jiya Sharma’, 10000,’receptionist’);
 insert into empl values (‘E0002’, ‘Gaurav Gupta’, 10000,’receptionist’);
 insert into empl values (‘E0003’, ‘Rahul Srivatava’, 25000,’manager’);
