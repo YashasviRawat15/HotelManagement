@@ -92,11 +92,12 @@ def price():
     query="insert into price values({},'{}',{})".format(SNO,TYPE,COST)
     cursor.execute(query)
     conn.commit()
-    print('==========PRICE==========')
+    print('\n==========PRICE==========\n')
     query="select* from price"
     cursor.execute(query)
     data=cursor.fetchall()
-    print(data)
+    print(*data, sep = "\n\n")
+    
 
 
 
@@ -182,8 +183,8 @@ createtables()
 
 
 while True: 
-    print('==========WELCOME TO KOHINOOR PALACE==========')
-    print('=====MENU=====')
+    print('\n\n==========WELCOME TO KOHINOOR PALACE==========\n')
+    print('=====MENU=====\n')
     print('1. FOR EMPLOYEE')
     print('2. FOR PRICE LISTS')
     print('3. FOR GUEST DETAILS')
@@ -193,14 +194,14 @@ while True:
 
     
     if choice==1:
-        print('================================================')
+        print('\n================================================\n')
         print('1. ADD EMPLOYEE')
         print('2. VIEW EMPLOYEE')
         print('3. DELETE EMPLOPYEE')
 
         
         choice2=int(input('ENTER YOUR CHOICE(1-3)'))
-        print('=================================================')
+        print('\n================================================\n')
         if choice2==1:
             new_empl()
         if choice2==2:
@@ -210,13 +211,13 @@ while True:
 
 
     if choice==2:
-        print('================================================')
+        print('\n================================================\n')
         print('1. ROOM PRICE')
         print('2. ITEM PRICE')
 
         
         choice3=int(input('ENTER YOUR CHOICE(1-2)'))
-        print('=================================================')
+        print('\n================================================\n')
         if choice3==1:
             price()
         if choice3==2:
@@ -225,13 +226,13 @@ while True:
 
 
     if choice==3:
-        print('================================================')
+        print('\n================================================\n')
         print('1. ADD GUEST DETAIL')
         print('2. SHOW DETAILS')
 
         
         choice4=int(input('ENTER YOUR CHOICE(1-2)'))
-        print('=================================================')
+        print('\n================================================\n')
         if choice4==1:
             guest()
         if choice4==2:
